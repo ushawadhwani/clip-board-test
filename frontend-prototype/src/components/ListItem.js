@@ -1,19 +1,26 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
 export default class ListItem extends React.Component {
   state = {
     value: this.props.item.promocode,
     copied: false,
+    bonusActivated: false,
   };
   updateValue = (event) => {
     this.setState({
       value: event.target.value,
     });
   };
+
+  activateBonus = () => {
+    this.setState({
+      bonusActivated: true,
+    });
+  };
   render() {
     const { item } = this.props;
+    const { bonusActivated } = this.state;
     return (
       <div class="block-row whiteblk bdr_radius4 bdr_gray p20">
         <div class="container-fluid">
@@ -52,7 +59,13 @@ export default class ListItem extends React.Component {
             </div>
             <div class="col-md-3 col-sm-4">
               <span class="small-font graytxt caps mb5 displayblk">&nbsp;</span>
-              <button class="btn btn-primary w100per">Activate bonus</button>
+              <button
+                class="btn btn-primary w100per"
+                onClick={this.activateBonus}
+                disabled={bonusActivated}
+              >
+                {bonusActivated ? "Activated" : "Activate bonus"}
+              </button>
             </div>
           </div>
         </div>
