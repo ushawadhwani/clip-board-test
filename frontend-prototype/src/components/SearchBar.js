@@ -6,7 +6,6 @@ export default function SearchBar(props) {
   return (
     <div>
       <h2>Services</h2>
-
       <div class="filter-blk">
         <form>
           <label>Filter</label>

@@ -9,7 +9,16 @@ export default function LeftMenu() {
         <FontAwesomeIcon icon={faTumblr} style={{ color: "#ffffff" }} />
       </div>
       <div className="circle">
+        <FontAwesomeIcon icon={faCircle} style={{ color: "#888" }} />
+      </div>
+      <div className="circle">
+        <FontAwesomeIcon icon={faCircle} style={{ color: "#888" }} />
+      </div>
+      <div className="circle">
         <FontAwesomeIcon icon={faCircle} style={{ color: "#ffffff" }} />
+      </div>
+      <div className="circle">
+        <FontAwesomeIcon icon={faCircle} style={{ color: "#888" }} />
       </div>
     </div>
   );

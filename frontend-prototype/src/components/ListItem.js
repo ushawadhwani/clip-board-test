@@ -26,6 +26,7 @@ export default class ListItem extends React.Component {
     this.setState({
       bonusActivated: true,
     });
+    toast.success("Bonus Activated", {});
   };
   render() {
     const { item } = this.props;
@@ -40,7 +41,7 @@ export default class ListItem extends React.Component {
             </div>
             <div class="col-md-3 col-sm-4">
               <span class="small-font graytxt caps mb5 displayblk">
-                Promocode
+                Promo-Code
               </span>
               <div class="input-group">
                 <input
@@ -58,7 +59,10 @@ export default class ListItem extends React.Component {
                   onCopy={this.showToast}
                 >
                   <span class="input-group-text" id="promocode">
-                    <FontAwesomeIcon icon={faCopy} />
+                    <FontAwesomeIcon
+                      icon={faCopy}
+                      style={{ color: "#0d6efd" }}
+                    />
                   </span>
                 </CopyToClipboard>
               </div>
