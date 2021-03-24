@@ -327,11 +327,13 @@ button {
   float: right;
 }
 .tumlr {
-  color: "#fff";
 }
 
 .circle {
-  color: "#fff";
+}
+
+.fa-color {
+  color: "#ffffff";
 }
 
 @media (max-width: 767px) {

@@ -6,10 +6,10 @@ export default function LeftMenu() {
   return (
     <div class="sidebar">
       <div className="tumlr">
-        <FontAwesomeIcon icon={faTumblr} style={{ color: "#ffffff" }} />
+        <FontAwesomeIcon icon={faTumblr} className="fa-color" />
       </div>
       <div className="circle">
-        <FontAwesomeIcon icon={faCircle} style={{ color: "#ffffff" }} />
+        <FontAwesomeIcon icon={faCircle} className="fa-color" />
       </div>
     </div>
   );
