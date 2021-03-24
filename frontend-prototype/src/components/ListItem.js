@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from "@fortawesome/free-regular-svg-icons";
+import toast from "./common/toast";
 
 export default class ListItem extends React.Component {
   state = {
@@ -13,6 +14,12 @@ export default class ListItem extends React.Component {
     this.setState({
       value: event.target.value,
     });
+  };
+  showToast = () => {
+    this.setState({
+      copied: true,
+    });
+    toast.success("Text copied", {});
   };
   render() {
     const { item } = this.props;
@@ -41,15 +48,12 @@ export default class ListItem extends React.Component {
 
                 <CopyToClipboard
                   text={this.state.value}
-                  onCopy={() => this.setState({ copied: true })}
+                  onCopy={this.showToast}
                 >
                   <span class="input-group-text" id="promocode">
                     <FontAwesomeIcon icon={faCopy} />
                   </span>
                 </CopyToClipboard>
-                {this.state.copied ? (
-                  <span style={{ color: "red" }}>Copied.</span>
-                ) : null}
               </div>
             </div>
             <div class="col-md-3 col-sm-4">
