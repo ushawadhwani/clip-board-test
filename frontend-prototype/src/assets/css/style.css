@@ -66,8 +66,8 @@ textarea,
 input[type="submit"] {
   -webkit-appearance: none;
   outline: none;
-  margin-right: 10px;
 }
+
 input:focus,
 textarea:focus {
   outline: none;
