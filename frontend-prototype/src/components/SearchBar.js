@@ -1,4 +1,8 @@
-export default function SearchBar() {
+export default function SearchBar(props) {
+  const handleFilterChange = (event) => {
+    props.updateFilter(event.target.value);
+  };
+
   return (
     <div>
       <h2>Services</h2>
@@ -6,7 +10,11 @@ export default function SearchBar() {
       <div class="filter-blk">
         <form>
           <label>Filter</label>
-          <input type="text" class="form-control" />
+          <input
+            type="text"
+            class="form-control"
+            onChange={handleFilterChange}
+          />
           <button class="btn btn-light">Reset</button>
         </form>
       </div>
