@@ -314,6 +314,10 @@ button {
   margin-bottom: 20px;
 }
 
+.fa-color {
+  color: "#ffffff";
+}
+
 @media (max-width: 767px) {
   .filter-blk input {
     width: 58%;
