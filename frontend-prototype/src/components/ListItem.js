@@ -4,8 +4,13 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 
 export default class ListItem extends React.Component {
   state = {
-    value: "",
+    value: this.props.item.promocode,
     copied: false,
+  };
+  updateValue = (event) => {
+    this.setState({
+      value: event.target.value,
+    });
   };
   render() {
     const { item } = this.props;
@@ -26,13 +31,14 @@ export default class ListItem extends React.Component {
                   type="text"
                   class="form-control"
                   placeholder="promocode"
-                  value={item.promocode}
+                  value={this.state.value}
                   aria-label="Promocode"
                   aria-describedby="promocode"
+                  onChange={this.updateValue}
                 />
 
                 <CopyToClipboard
-                  text={item.promocode}
+                  text={this.state.value}
                   onCopy={() => this.setState({ copied: true })}
                 >
                   <span class="input-group-text" id="promocode">
