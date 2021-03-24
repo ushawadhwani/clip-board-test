@@ -326,6 +326,13 @@ button {
 .footer {
   float: right;
 }
+.tumlr {
+  color: "#fff";
+}
+
+.circle {
+  color: "#fff";
+}
 
 @media (max-width: 767px) {
   .filter-blk input {

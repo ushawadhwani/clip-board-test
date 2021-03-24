@@ -5,8 +5,12 @@ import { faTumblr } from "@fortawesome/free-brands-svg-icons";
 export default function LeftMenu() {
   return (
     <div class="sidebar">
-      <FontAwesomeIcon icon={faTumblr} style={{ color: "#ffffff" }} />
-      <FontAwesomeIcon icon={faCircle} style={{ color: "#ffffff" }} />
+      <div className="tumlr">
+        <FontAwesomeIcon icon={faTumblr} style={{ color: "#ffffff" }} />
+      </div>
+      <div className="circle">
+        <FontAwesomeIcon icon={faCircle} style={{ color: "#ffffff" }} />
+      </div>
     </div>
   );
 }
