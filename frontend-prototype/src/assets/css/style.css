@@ -305,6 +305,7 @@ dl {
 }
 .input-group-text {
   background-color: transparent;
+  cursor: pointer;
 }
 .input-group > .form-control,
 .input-group > .form-select {
