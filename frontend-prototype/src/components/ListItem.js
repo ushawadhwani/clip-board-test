@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopy } from "@fortawesome/free-regular-svg-icons";
 
 export default class ListItem extends React.Component {
   state = {
@@ -42,7 +44,7 @@ export default class ListItem extends React.Component {
                   onCopy={() => this.setState({ copied: true })}
                 >
                   <span class="input-group-text" id="promocode">
-                    <i class="fa fa-copy bluetxt"></i>
+                    <FontAwesomeIcon icon={faCopy} />
                   </span>
                 </CopyToClipboard>
                 {this.state.copied ? (
