@@ -1,3 +1,7 @@
 export default function Footer() {
-  return <footer>IT Promocodes, 2019</footer>;
+  return (
+    <footer className="footer">
+      <p>© Powered by IT Promocodes</p>
+    </footer>
+  );
 }

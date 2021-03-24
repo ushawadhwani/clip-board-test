@@ -1,3 +1,11 @@
-export default function Header({ props }) {
-  return <div>IT Promocodes, 2019</div>;
+import HeaderItem from "./HeaderItem";
+
+export default function Header({ headerData }) {
+  return (
+    <div class="topheader">
+      {headerData.headerData.map((data, index) => {
+        return <HeaderItem data={data} />;
+      })}
+    </div>
+  );
 }
