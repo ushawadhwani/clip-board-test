@@ -20,6 +20,9 @@ function App() {
 
     setList(listToUpdate);
   };
+  const handleResetFilter = () => {
+    setList(listData.listData);
+  };
   const [list, setList] = useState(listData.listData);
 
   return (
@@ -30,7 +33,10 @@ function App() {
           <Header headerData={headerData} />
           <div class="middlecontent">
             <div class="content-area">
-              <SearchBar updateFilter={handleFilterUpdate} />
+              <SearchBar
+                updateFilter={handleFilterUpdate}
+                resetFilter={handleResetFilter}
+              />
               <List listData={list} />
               <Footer />
             </div>

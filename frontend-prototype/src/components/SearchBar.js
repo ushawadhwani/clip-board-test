@@ -15,7 +15,9 @@ export default function SearchBar(props) {
             class="form-control"
             onChange={handleFilterChange}
           />
-          <button class="btn btn-light">Reset</button>
+          <button class="btn btn-light" onClick={() => props.resetFilter()}>
+            Reset
+          </button>
         </form>
       </div>
     </div>
