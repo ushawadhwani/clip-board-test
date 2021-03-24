@@ -14,6 +14,7 @@ export default function SearchBar(props) {
             type="text"
             class="form-control"
             onChange={handleFilterChange}
+            style={{ "margin-right": "10px" }}
           />
           <button class="btn btn-light" onClick={() => props.resetFilter()}>
             Reset
